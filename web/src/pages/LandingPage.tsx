@@ -149,21 +149,22 @@ const LandingPage = () => {
                  <span className="text-[12px] font-black uppercase tracking-[0.2em] text-[#CCFF00]">S.A.M v2.0 PRODUCTION</span>
               </div>
               
-              <h1 className="text-7xl md:text-8xl lg:text-9xl font-black font-sans tracking-tighter leading-[0.85] mb-10 text-white uppercase italic">
+              <h1 className="text-7xl md:text-8xl lg:text-[10rem] font-black tracking-tighter leading-[0.8] mb-12 text-white uppercase italic">
                 CYPHER <br />
                 <span className="text-[#CCFF00]">STORY.</span>
               </h1>
               
-              <p className="max-w-xl text-xl text-slate-400 mb-12 font-medium leading-relaxed">
-                Secure your folders digitally with S.A.M
+              <p className="max-w-xl text-xl text-slate-400 mb-14 font-medium leading-relaxed tracking-tight">
+                Next-generation digital asset security. <br className="hidden md:block" /> 
+                Protect your records with S.A.M's quantum-resistant protocols.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center gap-6">
                 <button 
                   onClick={triggerUpload}
-                  className="btn-primary flex items-center justify-center gap-4 text-[14px] font-black uppercase tracking-widest px-12 py-6 rounded-2xl w-full sm:w-auto hover:translate-y-[-4px] transition-all"
+                  className="btn-primary group flex items-center justify-center gap-4 text-[13px] font-black uppercase tracking-[0.2em] px-14 py-7 rounded-2xl w-full sm:w-auto transition-all"
                 >
-                  <Upload size={20} /> Upload Asset
+                  <Upload size={20} className="group-hover:scale-110 transition-transform" /> Initialize Upload
                 </button>
                 <Link to="/login" className="btn-secondary flex items-center justify-center text-[14px] font-black uppercase tracking-widest px-12 py-6 rounded-2xl w-full sm:w-auto">
                   View Database

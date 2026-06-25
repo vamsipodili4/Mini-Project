@@ -72,43 +72,43 @@ const Login = () => {
       <motion.div 
         initial={{ opacity: 0, scale: 0.95, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
-        className="glass-card p-10 md:p-12 rounded-[48px] w-full max-w-lg text-center border-[#FFB800]/10 shadow-[0_50px_100px_rgba(0,0,0,0.8)] relative overflow-hidden bg-black/60 backdrop-blur-3xl"
+        className="glass-card p-10 md:p-12 rounded-[48px] w-full max-w-lg text-center border-[#CCFF00]/10 shadow-[0_50px_100px_rgba(0,0,0,0.8)] relative overflow-hidden bg-black/60 backdrop-blur-3xl"
       >
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#FFB800]/40 to-transparent" />
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#CCFF00]/40 to-transparent" />
         
         <div className="mb-10">
           <motion.div 
             whileHover={{ rotate: 180 }}
-            className="w-20 h-20 bg-[#FFB800] rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-[0_0_40px_rgba(255,184,0,0.3)]"
+            className="w-20 h-20 bg-[#CCFF00] rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-[0_0_40px_rgba(204,255,0,0.3)]"
           >
             <ShieldCheck className="text-black" size={40} />
           </motion.div>
-          <h1 className="text-4xl font-black tracking-tighter text-white mb-2">
+          <h1 className="text-4xl font-black tracking-tighter text-white mb-2 italic">
             {isRegister ? 'CREATE ACCOUNT' : 'SYSTEM ACCESS'}
           </h1>
-          <p className="text-[#FFB800] font-bold text-[10px] uppercase tracking-[0.3em] font-sans">Secure Asset Manager v2.0</p>
+          <p className="text-[#CCFF00] font-bold text-[10px] uppercase tracking-[0.3em]">Vault Protocol v2.5</p>
         </div>
 
         <div className="mb-8 p-6 bg-red-500/10 border border-red-500/20 rounded-3xl text-red-500 text-left">
            <div className="flex items-center gap-3 mb-2">
               <ShieldCheck size={18} />
-              <span className="text-[11px] font-black uppercase tracking-widest">CRITICAL SECURITY WARNING</span>
+              <span className="text-[11px] font-black uppercase tracking-widest leading-none">CRITICAL SECURITY WARNING</span>
            </div>
            <p className="text-[10px] font-bold leading-relaxed opacity-80 uppercase tracking-wider">
-              YOUR PASSWORD IS NON-RECOVERABLE VIA EMAILS. PLEASE ENSURE YOU REMEMBER IT ABSOLUTELY. LOSS OF PASSWORD MEANS LOSS OF ACCESS TO ALL ENCRYPTED ASSETS.
+              THIS SYSTEM USES ZERO-KNOWLEDGE ENCRYPTION. WE CANNOT RESET YOUR PASSWORD. IF LOST, ALL ASSETS BECOME PERMANENTLY INACCESSIBLE.
            </p>
         </div>
 
         <div className="flex gap-4 mb-8 p-1.5 bg-white/5 rounded-2xl border border-white/5">
           <button 
             onClick={() => setIsRegister(false)}
-            className={`flex-1 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all ${!isRegister ? 'bg-[#FFB800] text-black shadow-lg' : 'text-slate-500 hover:text-white'}`}
+            className={`flex-1 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all ${!isRegister ? 'bg-[#CCFF00] text-black shadow-lg' : 'text-slate-500 hover:text-white'}`}
           >
             Sign In
           </button>
           <button 
             onClick={() => setIsRegister(true)}
-            className={`flex-1 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all ${isRegister ? 'bg-[#FFB800] text-black shadow-lg' : 'text-slate-500 hover:text-white'}`}
+            className={`flex-1 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all ${isRegister ? 'bg-[#CCFF00] text-black shadow-lg' : 'text-slate-500 hover:text-white'}`}
           >
             Register
           </button>
@@ -116,7 +116,7 @@ const Login = () => {
 
         <button 
           onClick={handleGoogleLogin}
-          className="w-full glass-card hover:bg-white/10 flex items-center justify-center gap-4 py-4 rounded-2xl font-black text-[11px] uppercase tracking-widest transition-all group border-white/5 hover:border-[#FFB800]/40"
+          className="w-full glass-card hover:bg-white/10 flex items-center justify-center gap-4 py-4 rounded-2xl font-black text-[11px] uppercase tracking-widest transition-all group border-white/5 hover:border-[#CCFF00]/40"
         >
           <img src="https://www.google.com/favicon.ico" alt="Google" className="w-5 h-5 group-hover:scale-110 transition-transform" />
           Continue with Google Protocol
@@ -188,10 +188,10 @@ const Login = () => {
             />
             <button
               type="button"
-              className="absolute right-4 bottom-3.5 text-slate-500 hover:text-[#FFB800] transition-colors"
+              className="absolute right-4 bottom-3.5 text-slate-500 hover:text-[#CCFF00] transition-colors"
               onClick={() => setShowPassword(!showPassword)}
             >
-              <Eye size={20} className={showPassword ? 'text-[#FFB800]' : 'opacity-20'} />
+              <Eye size={20} className={showPassword ? 'text-[#CCFF00]' : 'opacity-20'} />
             </button>
           </div>
 
@@ -212,10 +212,10 @@ const Login = () => {
               />
               <button
                 type="button"
-                className="absolute right-4 bottom-3.5 text-slate-500 hover:text-[#FFB800] transition-colors"
+                className="absolute right-4 bottom-3.5 text-slate-500 hover:text-[#CCFF00] transition-colors"
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
               >
-                <Eye size={20} className={showConfirmPassword ? 'text-[#FFB800]' : 'opacity-20'} />
+                <Eye size={20} className={showConfirmPassword ? 'text-[#CCFF00]' : 'opacity-20'} />
               </button>
             </motion.div>
           )}
@@ -223,8 +223,7 @@ const Login = () => {
           <button 
             type="submit"
             disabled={isLoading}
-            className="w-full btn-primary py-5 rounded-2xl flex items-center justify-center gap-3 shadow-[0_0_30px_rgba(255,184,0,0.2)] hover:scale-[1.02] active:scale-95 transition-all mt-4"
-            style={{ backgroundColor: '#FFB800' }}
+            className="w-full btn-primary py-5 rounded-2xl flex items-center justify-center gap-3 shadow-[0_0_30px_rgba(204,255,0,0.2)] hover:scale-[1.02] active:scale-95 transition-all mt-4"
           >
             {isLoading ? <Loader2 className="animate-spin" size={20} /> : (isRegister ? <UserPlus size={20} /> : <LogIn size={20} />)}
             <span className="text-[11px] font-black uppercase tracking-[0.2em]">
@@ -235,12 +234,12 @@ const Login = () => {
 
         <p className="mt-10 text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 leading-relaxed">
           By continuing, you agree to S.A.M's <br className="md:hidden" />
-          <Link to="/terms" className="text-[#FFB800] hover:underline underline-offset-4 mx-1">Terms of Service</Link> 
+          <Link to="/terms" className="text-[#CCFF00] hover:underline underline-offset-4 mx-1">Terms of Service</Link> 
           and 
-          <Link to="/privacy" className="text-[#FFB800] hover:underline underline-offset-4 ml-1">Privacy Policy</Link>.
+          <Link to="/privacy" className="text-[#CCFF00] hover:underline underline-offset-4 ml-1">Privacy Policy</Link>.
         </p>
 
-        <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-[#FFB800]/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-[#CCFF00]/5 rounded-full blur-3xl pointer-events-none" />
       </motion.div>
     </div>
   )

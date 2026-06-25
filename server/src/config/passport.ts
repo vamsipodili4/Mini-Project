@@ -8,7 +8,7 @@ dotenv.config();
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID || 'dummy',
     clientSecret: process.env.GOOGLE_CLIENT_SECRET || 'dummy',
-    callbackURL: process.env.CALLBACK_URL || '/api/auth/google/callback'
+    callbackURL: process.env.CALLBACK_URL || 'https://mini-project-0f2w.onrender.com/api/auth/google/callback'
   },
   async (accessToken, refreshToken, profile, done) => {
     try {
