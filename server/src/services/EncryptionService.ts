@@ -1,4 +1,5 @@
 import crypto from 'crypto';
+import { Buffer } from 'buffer';
 import dotenv from 'dotenv';
 
 dotenv.config();

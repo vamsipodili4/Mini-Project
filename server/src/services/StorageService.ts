@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import crypto from 'crypto';
+import { Buffer } from 'buffer';
 import { EncryptionService } from './EncryptionService.js';
 import { Readable } from 'stream';
 
